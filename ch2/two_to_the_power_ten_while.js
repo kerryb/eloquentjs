@@ -4,4 +4,4 @@ while (power > 1) {
   answer *= 2;
   power -= 1;
 }
-console.log(answer);
+print(answer);
