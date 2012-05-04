@@ -1,0 +1,6 @@
+Difference between throw("foo") and throw(new Error("foo"))
+
+Defensive programming: good or evil?
+  Fair enough in library code, and obviously should check external inputs, but otherwise...?
+
+Exceptions for control flow: ditto.
