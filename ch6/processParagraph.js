@@ -14,7 +14,3 @@ function processParagraph(para) {
     return {"content": para.slice(headingLevel + 1), "type": "h" + headingLevel};
   }
 }
-
-show(processParagraph("Not a heading"));
-show(processParagraph("% Heading one"));
-show(processParagraph("%%%% Heading four"));
