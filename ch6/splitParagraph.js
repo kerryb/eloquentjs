@@ -15,15 +15,15 @@ function splitParagraph(para) {
   while (remainder.length !== 0) {
     if (remainder[0] === "*") {
       end = findNext(remainder, ["*"]);
-      chunks.push({"content": remainder.slice(1, end), "type": "emphasis"});
+      chunks.push({content: remainder.slice(1, end), type: "emphasis"});
       remainder = remainder.slice(end + 1);
     } else if (remainder[0] === "{") {
       end = findNext(remainder, ["}"]);
-      chunks.push({"content": remainder.slice(1, end), "type": "footnote"});
+      chunks.push({content: remainder.slice(1, end), type: "footnote"});
       remainder = remainder.slice(end + 1);
     } else {
       end = findNext(remainder, ["*", "{"]);
-      chunks.push({"content": remainder.slice(0, end), "type": "normal"});
+      chunks.push({content: remainder.slice(0, end), type: "normal"});
       remainder = remainder.slice(end);
     }
   }

@@ -9,8 +9,8 @@ function processParagraph(para) {
 
   var headingLevel = findHeadingLevel(para);
   if (headingLevel === 0) {
-    return {"content": para, "type": "p"};
+    return {content: para, type: "p"};
   } else {
-    return {"content": para.slice(headingLevel + 1), "type": "h" + headingLevel};
+    return {content: para.slice(headingLevel + 1), type: "h" + headingLevel};
   }
 }
