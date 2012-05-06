@@ -17,6 +17,6 @@ describe("renderParagraph", function(){
     expect(renderParagraph(
         [{content: "a paragraph", type: "normal"},
         {type: "reference", number: 42}])).toEqual(
-        tag("p", ["a paragraph", tag("sup", [tag("a", ["42"], {href: "#42"})])]));
+        tag("p", ["a paragraph", tag("sup", [tag("a", ["42"], {href: "#footnote42"})])]));
   });
 });

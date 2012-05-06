@@ -5,7 +5,7 @@ function renderFragment(fragment) {
     case "emphasis":
       return tag("em", [fragment.content]);
     case "reference":
-      return tag("sup", [tag("a", [String(fragment.number)], {href: "#" + fragment.number})]);
+      return tag("sup", [tag("a", [String(fragment.number)], {href: "#footnote" + fragment.number})]);
     default:
       return "";
   }
