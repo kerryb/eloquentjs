@@ -1,4 +1,5 @@
 source "http://rubygems.org"
 
-gem "jasmine-headless-webkit"
 gem "guard-jasmine-headless-webkit"
+gem "growl"
+gem "jasmine-headless-webkit"
