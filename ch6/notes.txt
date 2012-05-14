@@ -1,0 +1,7 @@
+First class and higher order functions
+apply() and arguments
+  arguments isn't really an array
+forEach, map, reduce
+String creation is expensive
+  Concatenate all at once instead of one by one
+Operators aren't functions
