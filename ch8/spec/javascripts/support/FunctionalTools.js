@@ -78,11 +78,11 @@ function bind(func, object) {
   };
 }
 
-function method(object, name) {
-  return function() {
-    object[name].apply(object, arguments);
-  };
-}
+//function method(object, name) {
+  //return function() {
+    //object[name].apply(object, arguments);
+  //};
+//}
 
 function compose(func1, func2) {
   return function() {
