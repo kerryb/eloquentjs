@@ -5,7 +5,7 @@ function escapeHTML(html) {
         case ">": return "&gt;";
         case '"': return "&quot;";
         case "&": return "&amp;";
-        default: return match;
+        default: return match; // never used, but keeps lint happy
       }
     });
 }
