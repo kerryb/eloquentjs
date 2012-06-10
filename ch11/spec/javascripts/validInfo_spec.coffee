@@ -22,3 +22,28 @@ describe "validInfo", ->
 
   it "returns true if the name is present and email is valid", ->
     expect(validInfo()).toBe true
+
+  describe "submit button", ->
+    beforeEach ->
+      spyOn form, "submit"
+      spyOn window, "alert"
+
+    describe "when valid", ->
+      it "submits the form", ->
+        validInfo()
+        form.send.onClick()
+        expect(form.submit).toHaveBeenCalled()
+
+    describe "when invalid", ->
+      beforeEach ->
+        form.elements.name.value = ""
+
+      it "does not submit the form", ->
+        validInfo()
+        form.send.onClick()
+        expect(form.submit).not.toHaveBeenCalled()
+
+      it "shows an error dialogue", ->
+        validInfo()
+        form.send.onClick()
+        expect(alert).toHaveBeenCalledWith("FAIL")
