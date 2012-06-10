@@ -25,6 +25,7 @@ describe "validInfo", ->
 
   describe "submit button", ->
     beforeEach ->
+      setupForm()
       spyOn form, "submit"
       spyOn window, "alert"
 
@@ -39,11 +40,9 @@ describe "validInfo", ->
         form.elements.name.value = ""
 
       it "does not submit the form", ->
-        validInfo()
         form.send.onClick()
         expect(form.submit).not.toHaveBeenCalled()
 
       it "shows an error dialogue", ->
-        validInfo()
         form.send.onClick()
         expect(alert).toHaveBeenCalledWith("FAIL")
